@@ -12,7 +12,7 @@ function UpdateUser() {
     useEffect(()=> {
         const fetchData = async() => {
             try {
-                const response = await axios.get("http://localhost:3001/get/"+id);
+                const response = await axios.get("https://studentsprofiles.onrender.com/get/"+id);
                 console.log(response);
                 setName(response.data.name)
                 setEmail(response.data.email)
@@ -28,7 +28,7 @@ function UpdateUser() {
  
     const handleUpdate = (e) => {
         e.preventDefault()
-        axios.put('http://localhost:3001/update/'+id, {name, email, age})
+        axios.put('https://studentsprofiles.onrender.com//update/'+id, {name, email, age})
         .then(res => {
             console.log(res);
             navigate('/')

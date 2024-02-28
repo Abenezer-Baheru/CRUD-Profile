@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './create-user.css';
 
 function CreateUser() {
   const [name, setName] = useState();
@@ -13,7 +12,7 @@ function CreateUser() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:3001/create', { name, email, age })
+      .post('https://studentsprofiles.onrender.com/create', { name, email, age })
       .then((res) => {
         console.log(res);
         navigate('/');

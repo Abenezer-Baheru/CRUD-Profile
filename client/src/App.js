@@ -1,6 +1,4 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-// import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css';
 import Users from './components/Users'
 import CreateUser from './components/CreateUser'
 import UpdateUser from './components/UpdateUser'

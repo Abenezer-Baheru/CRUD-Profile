@@ -4,13 +4,12 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 
 function Users() {
   const { id } = useParams();
-
   const [data, setData] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get('http://localhost:3001/')
+      .get('https://studentsprofiles.onrender.com/')
       .then((res) => {
         console.log(res);
         setData(res.data);
@@ -20,7 +19,7 @@ function Users() {
 
   const handleDelete = (id) => {
     axios
-      .delete('http://localhost:3001/deleteuser/' + id)
+      .delete('https://studentsprofiles.onrender.com/deleteuser/' + id)
       .then((res) => {
         console.log(res);
         navigate('/');
@@ -30,8 +29,6 @@ function Users() {
 
   return (
     <div className="users">
-      {/* Student Registration Form */}
-      {/* <p>Student Registration Form</p> */}
       <div className="users-form">
         <table className="table">
           <thead>
